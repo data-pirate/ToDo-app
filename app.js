@@ -2,8 +2,6 @@ const todos = document.querySelector('.todos');
 
 const addtodo = document.querySelector('.add');
 
-const delete_button = document.querySelector('.delete')
-
 const search = document.querySelector('.search');
 
 
@@ -19,6 +17,8 @@ const generateTodo = todo => {
 
 addtodo.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // preventing extra white spaces
     if (addtodo.add.value.trim().length) {
         generateTodo(addtodo.add.value.trim());
         addtodo.reset();
@@ -26,8 +26,12 @@ addtodo.addEventListener('submit', (e) => {
 });
 
 // delete a Todo
-delete_button.addEventListener('click', e => {
-    e.target.parentElement.remove();
+todos.addEventListener('click', e => {
+
+    // checking if we have clicked on trash can not anything else
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
 });
 
 

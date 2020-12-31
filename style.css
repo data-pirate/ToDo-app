@@ -1,22 +1,22 @@
 body{
-    background: #352f5b;
+    background: rgba(236, 82, 75, 0.8);
 }
 
 .container{
-    max-width: 400px;
+    max-width: 600px;
 }
 
 input[type=text],
 input[type=text]:focus{
     color: #fff;
+    background: rgba(245, 180, 97, 0.3);
     border: none;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.2);
     max-width: 400px;
 }
 
 .todos li{
-    background: #423a6f;
+    background: #f5b461;
     font-weight: bold;
 }
 
